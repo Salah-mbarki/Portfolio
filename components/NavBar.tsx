@@ -26,12 +26,7 @@ export default function Navbar() {
           : "bg-transparent border-b border-transparent"
       }`}
     >
-      <Link
-        href="/"
-        className="font-display text-xl font-semibold text-cream tracking-wide"
-      >
-        S<span className="text-accent">.</span>Mbaki
-      </Link>
+      <div></div>
 
       <ul className="hidden md:flex gap-10 list-none">
         {links.map((item) => (

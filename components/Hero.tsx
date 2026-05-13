@@ -118,7 +118,7 @@ export default function Hero() {
 
           {/* Label below photo */}
           <div className="mt-3 flex items-center justify-between">
-            <span className="font-display italic text-muted2 text-sm">Salah Mbaki</span>
+            <span className="font-display italic text-muted2 text-sm">Salah Mbarki</span>
             <span className="font-mono text-[10px] tracking-widest text-muted uppercase">Tunisia</span>
           </div>
         </div>
