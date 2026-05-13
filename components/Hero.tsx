@@ -32,7 +32,7 @@ export default function Hero() {
       />
 
       {/* Two-column layout */}
-      <div className="relative z-10 grid md:grid-cols-[1fr_340px] gap-16 items-center">
+      <div className="relative z-10 flex flex-col-reverse md:grid md:grid-cols-[1fr_340px] gap-10 md:gap-16 items-center">
 
         {/* Left — text */}
         <div>
@@ -89,8 +89,8 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right — photo */}
-        <div className="hidden md:block relative">
+        {/* Right — photo */} 
+        <div className="relative">
           {/* Decorative corner frames */}
           <div className="absolute -top-3 -left-3 w-12 h-12 border-t border-l border-accent opacity-60 z-10" />
           <div className="absolute -bottom-3 -right-3 w-12 h-12 border-b border-r border-accent opacity-60 z-10" />
