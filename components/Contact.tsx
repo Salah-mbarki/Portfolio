@@ -18,13 +18,13 @@ const contactLinks = [
   {
     icon: "github",
     label: "GitHub",
-    display: "github.com/salah-mbaki",
-    href: "https://github.com/salah-mbaki",
+    display: "github.com/Salah-mbarki",
+    href: "https://github.com/Salah-mbarki",
   },
   {
     icon: "linkedin",
     label: "LinkedIn",
-    display: "linkedin.com/in/salah-mbaki",
+    display: "linkedin.com/in/salah-mbarki",
     href: "https://www.linkedin.com/in/salah-mbarki/",
   },
 ];

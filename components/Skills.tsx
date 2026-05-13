@@ -3,12 +3,12 @@
 import { useReveal } from "@/Hooks/Usereveal";
 
 const skills = [
-  { name: "Angular", icon: "</>", category: "Frontend Framework", fill: "88%" },
-  { name: "ASP.NET", icon: "⬡", category: "Backend / API", fill: "82%" },
-  { name: "SQL Server", icon: "▤", category: "Database", fill: "80%" },
-  { name: "TailwindCSS", icon: "≋", category: "Styling", fill: "90%" },
-  { name: "Ionic", icon: "◈", category: "Cross-Platform Mobile", fill: "78%" },
-  { name: "Godot", icon: "◉", category: "Game Development", fill: "72%" },
+  { name: "Angular",    icon: "devicon-angular-plain",     category: "Frontend Framework",    fill: "88%" },
+  { name: "ASP.NET",    icon: "devicon-dotnetcore-plain",  category: "Backend / API",         fill: "82%" },
+  { name: "SQL Server", icon: "devicon-microsoftsqlserver-plain", category: "Database",       fill: "80%" },
+  { name: "TailwindCSS",icon: "devicon-tailwindcss-plain", category: "Styling",               fill: "90%" },
+  { name: "Ionic",      icon: "devicon-ionic-original",    category: "Cross-Platform Mobile", fill: "78%" },
+  { name: "Godot",      icon: "devicon-godot-plain",       category: "Game Development",      fill: "72%" },
 ];
 
 const extras = [
@@ -45,9 +45,7 @@ export default function Skills() {
             className="group relative bg-surface hover:bg-surface2 p-8 transition-colors duration-300 border-r border-b border-border"
           >
             <div className="absolute top-0 left-0 right-0 h-0.5 bg-accent origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
-            <div className="font-mono text-4xl text-border2 group-hover:text-accent transition-colors duration-300 mb-4" aria-hidden>
-              {icon}
-            </div>
+            <i className={`${icon} text-4xl text-border2 group-hover:text-accent transition-colors duration-300 mb-4 block`} />
             <p className="font-ui font-bold text-base text-cream mb-1">{name}</p>
             <p className="font-mono text-[11px] tracking-widest uppercase text-muted">{category}</p>
             <div className="mt-5 h-0.5 bg-border relative overflow-hidden">
