@@ -31,30 +31,28 @@ export default function About() {
 
       <div className="grid md:grid-cols-2 gap-16 items-start">
         {/* Text */}
-        <div className="reveal reveal-delay-1 space-y-5">
+        <div className="reveal reveal-delay-1 space-y-6">
           <p className="text-base text-muted2 leading-loose">
-            I&apos;m a{" "}
-            <strong className="text-cream font-semibold">software engineer</strong>{" "}
-            specializing in full-stack development with a strong focus on clean
-            architecture, scalable APIs, and intelligent system design.
+            I got into software because I liked breaking things and figuring out why.
+            That curiosity turned into a degree, a few shipped projects, and a habit
+            of not stopping until something actually works — not just compiles.
           </p>
           <p className="text-base text-muted2 leading-loose">
-            My work spans from enterprise-grade{" "}
-            <strong className="text-cream font-semibold">ASP.NET</strong> backends and{" "}
-            <strong className="text-cream font-semibold">SQL Server</strong> data modeling
-            to reactive <strong className="text-cream font-semibold">Angular</strong>{" "}
-            frontends styled with{" "}
+            Most of my work lives on the backend —{" "}
+            <strong className="text-cream font-semibold">ASP.NET</strong> APIs,{" "}
+            <strong className="text-cream font-semibold">SQL Server</strong> databases —
+            but I care just as much about what the user sees. I build the frontend too,
+            mostly with <strong className="text-cream font-semibold">Angular</strong> and{" "}
             <strong className="text-cream font-semibold">TailwindCSS</strong>.
           </p>
           <p className="text-base text-muted2 leading-loose">
-            I have hands-on experience integrating{" "}
-            <strong className="text-cream font-semibold">LLMs and RAG pipelines</strong>{" "}
-            into production applications — building AI-powered features that genuinely
-            improve user experience rather than just ticking a checkbox.
+            Lately I&apos;ve been deep into AI integration — not the hype side,
+            but the practical side. Getting an LLM to actually behave inside a real
+            product, with real users, is a different problem entirely. I enjoy that problem.
           </p>
 
           {/* Contact info */}
-          <div className="pt-4 space-y-0">
+          <div className="pt-2 space-y-0">
             <InfoRow icon="mail" href="mailto:mbarkisalah145@gmail.com">
               mbarkisalah145@gmail.com
             </InfoRow>
@@ -64,26 +62,48 @@ export default function About() {
           </div>
         </div>
 
-        {/* Stats */}
-        <div className="reveal reveal-delay-2">
-          <div className="grid grid-cols-2 gap-6">
-            {stats.map(({ num, label }) => (
-              <div
-                key={label}
-                className="border-l border-border2 pl-6 flex flex-col"
-              >
-                <span
-                  className="font-display font-light text-accent leading-none"
-                  style={{ fontSize: "3rem" }}
-                >
-                  {num}
-                </span>
-                <span className="font-mono text-xs tracking-widest text-muted2 uppercase mt-1">
-                  {label}
-                </span>
+        {/* Timeline */}
+        <div className="reveal reveal-delay-2 flex flex-col gap-0">
+          {[
+            {
+              year: "May 2025",
+              title: "Golden Knight",
+              note: "Built a 2D platformer in Godot for fun. Learned that game dev and software engineering share more than you'd think.",
+            },
+            {
+              year: "Sep 2025",
+              title: "Novel Haven",
+              note: "Built a full bookstore platform and wired a RAG chatbot into it. First time shipping an LLM feature end-to-end.",
+            },
+            {
+              year: "Oct 2025",
+              title: "GEST-ISIMM",
+              note: "Competed in ACT-FOR-ISIMM. Built a cross-platform university app in Ionic connecting students, teachers and admin.",
+            },
+            {
+              year: "Jun 2026",
+              title: "Dance & Diet",
+              note: "Bachelor graduation project — web & mobile wellness platform with an integrated diet recommendation LLM.",
+            }
+          ].map(({ year, title, note }, i, arr) => (
+            <div key={title} className="flex gap-5 group">
+              {/* Line + dot */}
+              <div className="flex flex-col items-center">
+                <div className="w-2 h-2 rounded-full bg-accent mt-1.5 flex-shrink-0 group-hover:scale-125 transition-transform duration-200" />
+                {i < arr.length - 1 && (
+                  <div className="w-px flex-1 bg-border2 mt-1" />
+                )}
               </div>
-            ))}
-          </div>
+              {/* Content */}
+              <div className="pb-8">
+                <span className="font-mono text-[10px] tracking-widest text-accent uppercase">
+                  {year}
+                </span>
+                <p className="font-ui font-semibold text-cream text-sm mt-0.5 mb-1">{title}</p>
+                <p className="text-xs text-muted2 leading-relaxed">{note}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

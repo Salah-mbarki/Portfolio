@@ -51,7 +51,7 @@ export default function Hero() {
           >
             Salah
             <br />
-            <em className="text-accent not-italic italic">Mbaki</em>
+            <em className="text-accent not-italic italic">Mbarki</em>
           </h1>
 
           {/* Role */}
