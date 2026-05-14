@@ -103,16 +103,11 @@ export default function Hero() {
 
           <div className="relative overflow-hidden" style={{ aspectRatio: "3/4" }}>
             <Image
-              src="/portfolio_pic.png"
+              src="/portfolio pic.png"
               alt="Salah Mbaki"
               fill
               className="object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
               priority
-            />
-            {/* Gold gradient overlay at bottom */}
-            <div
-              className="absolute bottom-0 left-0 right-0 h-1/3 pointer-events-none"
-              style={{ background: "linear-gradient(to top, rgba(201,168,76,0.2), transparent)" }}
             />
           </div>
 
