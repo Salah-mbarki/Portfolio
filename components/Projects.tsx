@@ -71,7 +71,7 @@ export default function Projects() {
   return (
     <section id="projects" className="px-12 py-24">
       <div ref={ref} className="reveal flex items-center gap-6 mb-16">
-        <span className="font-mono text-xs text-accent tracking-widest">03</span>
+        <span className="font-mono text-xs text-accent tracking-widest">04</span>
         <h2
           className="font-display font-light text-cream"
           style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}

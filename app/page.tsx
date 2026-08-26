@@ -2,6 +2,7 @@ import Navbar from "@/components/NavBar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
+import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <About />
       <Skills />
+      <Experience />
       <Projects />
       <Contact />
       <footer className="px-12 py-8 border-t border-border flex justify-between items-center">

@@ -8,7 +8,7 @@ const skills = [
   { name: "SQL Server", icon: "devicon-microsoftsqlserver-plain", category: "Database",       fill: "80%" },
   { name: "TailwindCSS",icon: "devicon-tailwindcss-plain", category: "Styling",               fill: "90%" },
   { name: "Ionic",      icon: "devicon-ionic-original",    category: "Cross-Platform Mobile", fill: "78%" },
-  { name: "Godot",      icon: "devicon-godot-plain",       category: "Game Development",      fill: "72%" },
+  { name: "Godot / Unity", icon: "devicon-godot-plain",    category: "Game Development",      fill: "72%" },
 ];
 
 const extras = [
