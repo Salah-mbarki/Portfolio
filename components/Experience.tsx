@@ -7,15 +7,21 @@ const experiences = [
     role: "Full Stack Web Development Intern",
     company: "ARSII",
     dates: "Feb 2026 — Jun 2026",
-    description:
-      "Contributed to the design and development of the web version of Dance & Diet, a multi-role platform for managing dance schools and tracking well-being. Collaborated directly with a non-technical client to gather requirements, clarify expectations, and refine features from feedback. Took part in the full development cycle, from analysing requests through implementing and testing new features.",
+    description: [
+      "Contributed to the design and development of the web version of Dance & Diet, a multi-role platform for managing dance schools and tracking well-being.",
+      "Collaborated directly with a non-technical client to gather requirements, clarify expectations, and refine features from feedback.",
+      "Took part in the full development cycle, from analysing client requests through implementing and testing new features.",
+    ],
   },
   {
     role: "Full Stack Developer & Data Analyst",
     company: "KweekTech",
     dates: "Jul 2026 — Aug 2026",
-    description:
-      "Applied analytical and technical skills to process and interpret data in support of business needs. Developed a client-focused web application with Next.js, Convex, and Cloudinary, independently delivering analytical and technical solutions within a short timeframe.",
+    description: [
+      "Applied analytical and technical skills to process and interpret data in support of business needs.",
+      "Developed a client-focused web application with Next.js, Convex, and Cloudinary.",
+      "Independently delivered analytical and technical solutions within a short timeframe in a professional environment.",
+    ],
   },
 ];
 
@@ -47,7 +53,7 @@ export default function Experience() {
             <span className="font-mono text-sm text-muted pt-1 text-right">0{index + 1}</span>
 
             <div>
-              <p className="font-mono text-[10px] tracking-widest uppercase text-accent mb-4">
+              <p className="font-mono text-sm font-medium tracking-[0.2em] uppercase text-accent mb-3">
                 {experience.company}
               </p>
               <h3
@@ -56,7 +62,14 @@ export default function Experience() {
               >
                 {experience.role}
               </h3>
-              <p className="text-sm text-muted2 leading-loose max-w-2xl">{experience.description}</p>
+              <ul className="max-w-2xl space-y-3">
+                {experience.description.map((item) => (
+                  <li key={item} className="flex gap-3 text-sm text-muted2 leading-loose">
+                    <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
 
             <time className="font-mono text-xs text-muted tracking-wide pt-1 whitespace-nowrap">
