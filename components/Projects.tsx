@@ -5,7 +5,8 @@ import { useReveal } from "@/Hooks/Usereveal";
 const projects = [
   {
     num: "01",
-    year: "2024",
+    year: "2025",
+    date: "2025-09",
     badge: "Featured",
     tags: ["E-Commerce", "RAG", "AI Chatbot", "Full-Stack"],
     title: "Novel Haven",
@@ -17,7 +18,8 @@ const projects = [
   },
   {
     num: "02",
-    year: "2024",
+    year: "2026",
+    date: "2026-06",
     badge: "Bachelor Project",
     tags: ["Web + Mobile", "Wellness", "LLM"],
     title: "Dance&Diet",
@@ -33,7 +35,8 @@ const projects = [
   },
   {
     num: "03",
-    year: "2024",
+    year: "2025",
+    date: "2025-10",
     badge: "ACT-FOR-ISIMM Challenge",
     tags: ["Cross-Platform", "Ionic", "Mobile App", "University"],
     title: "GEST-ISIMM",
@@ -49,7 +52,8 @@ const projects = [
   },
   {
     num: "04",
-    year: "2024",
+    year: "2025",
+    date: "2025-05",
     badge: "Game Dev",
     tags: ["2D Platformer", "Godot", "GDScript", "Game"],
     title: "Golden Knight",
@@ -67,6 +71,7 @@ const projects = [
 
 export default function Projects() {
   const ref = useReveal();
+  const chronologicalProjects = [...projects].sort((a, b) => a.date.localeCompare(b.date));
 
   return (
     <section id="projects" className="px-12 py-24">
@@ -85,13 +90,13 @@ export default function Projects() {
       </div>
 
       <div>
-        {projects.map((p, i) => (
+        {chronologicalProjects.map((p, i) => (
           <div
-            key={p.num}
+            key={p.title}
             className={`project-card reveal ${i % 2 !== 0 ? "reveal-delay-1" : ""} grid md:grid-cols-[2rem_1fr_auto] gap-8 md:gap-12 py-12 border-b border-border cursor-default`}
           >
             {/* Number */}
-            <span className="font-mono text-sm text-muted pt-1 text-right">{p.num}</span>
+            <span className="font-mono text-sm text-muted pt-1 text-right">{String(i + 1).padStart(2, "0")}</span>
 
             {/* Body */}
             <div>
